@@ -29,7 +29,7 @@ int main()
     SnakeHead player(stdscr->_maxx / 2, stdscr->_maxy / 2);
 
     // create fruits and randomly move them
-    std::vector<Fruit> fruits(50, Fruit(0, 0));
+    std::vector<Fruit> fruits(2, Fruit(0, 0));
 
     for (auto& fruit : fruits)
     {
@@ -84,17 +84,6 @@ int main()
 
         // a fraction of a second
         constexpr double time_delta = 1.0 / 8.0;
-
-        mvprintw(stdscr->_maxy, 1, "frame time: %lgus | sleep time: %lgus | target: %lgus",
-            time_taken,
-            (time_delta * 1e6) - time_taken,
-            (time_delta * 1e6)
-        );
-
-        refresh();
-
-        end = std::chrono::high_resolution_clock::now();
-        time_taken = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
 
         usleep((time_delta * 1e6) - time_taken);
     }
