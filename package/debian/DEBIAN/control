@@ -3,6 +3,6 @@ Version: 1.0.0
 Section: development
 Priority: optional
 Architecture: amd64
-Depends: libncurses6 (>=6.2)
+Depends: libncurses6
 Maintainer: aprilkahny@gmail.com
 Description: snake cli game
