@@ -1,0 +1,8 @@
+Package: snake
+Version: 1.0.0
+Section: development
+Priority: optional
+Architecture: all
+Depends: libncurses6 (>=6.2)
+Maintainer: aprilkahny@gmail.com
+Description: snake cli game
